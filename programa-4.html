@@ -21,20 +21,23 @@ function limpiarPantalla(){
 }
 
 var x = 0;
+var y= 40;
 
 function actualizarPantalla() {
  
          limpiarPantalla();
-         disenharCircunferencia(x,20,10);
+         disenharCircunferencia(x,y,40);
          x++;
          if (x >=600){
             x=0;
+            y+=40;
+        
          }
 
 }
 
 
-    setInterval(actualizarPantalla,5);
+    setInterval(actualizarPantalla,2);
           
 
 
