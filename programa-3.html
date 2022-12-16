@@ -3,5 +3,16 @@
 <script>
 
     var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillstyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+function exhibirAlerta(); {
+         alert("Usted hizo un click");
+
+}
+
+         pantalla.onclick = exhibirAlerta;
 
 </script>
