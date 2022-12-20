@@ -2,17 +2,18 @@ body {
   background: #ffffff;
 }
 
-#banner{
-  width: 100%;  
+.titulo-principal{
+    
+    padding-left: 30px;
+}
+
+#banner {
+  width: 100%;
 }
 
 .principal {
-    background: #cccccc;
-    padding: 20px;
-}
-
-h1 {
-  text-align: center;
+  background: #cccccc;
+  padding: 20px;
 }
 
 p {
@@ -28,26 +29,25 @@ em strong {
 }
 
 .diferenciales {
-    background: #ffffff;
-    padding: 30px;
+  background: #ffffff;
+  padding: 30px;
 }
 
-
-h2 {
-    text-align: center;
+.titulo-centralizado {
+  text-align: center;
 }
 
 .items {
-  font-style: italic;  
+  font-style: italic;
 }
 
-ul{
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin-right: 15%;
 }
 
-.imagenDiferenciales{    
-    width: 50%;
+.imagenDiferenciales {
+  width: 50%;
 }
