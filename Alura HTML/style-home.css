@@ -1,53 +1,49 @@
-body {
-  background: #ffffff;
-}
-
 .titulo-principal{
-    
     padding-left: 30px;
 }
 
-#banner {
-  width: 100%;
+#banner{
+    width:100%;
 }
 
-.principal {
-  background: #cccccc;
-  padding: 20px;
+.principal{
+    background: #CCCCCC;
+    padding: 20px;
 }
 
-p {
-  text-align: center;
+.titulo-centralizado{
+    text-align: center;
 }
 
-em strong {
-  color: red;
+p{
+    text-align: center;
 }
 
-#mision {
-  font-size: 20px;
+em strong{
+    color:red;
 }
 
-.diferenciales {
-  background: #ffffff;
-  padding: 30px;
+#mision{
+    font-size: 20px;
 }
 
-.titulo-centralizado {
-  text-align: center;
+.diferenciales{
+    background: #FFFFFF;
+    padding: 30px;
 }
 
-.items {
-  font-style: italic;
+.items{
+    font-style: italic;
 }
 
-ul {
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-  margin-right: 15%;
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
 }
 
-.imagenDiferenciales {
-  width: 50%;
+.imagenDiferenciales{
+    width: 50%;
 }
+
