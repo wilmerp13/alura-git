@@ -1,14 +1,17 @@
 .logo {
     text-align: start;
     position: relative;
-    top: 20px;
+    margin: 50px 0 0 15%;
     
 }
 
+
+
 .caja-texto {
-    position:relative;
+    position: relative;
     text-align: center;
-    top: 400px;
+    top: 300px;
+    margin: 0 auto;
     
 
 }
@@ -16,7 +19,7 @@
 .btn {
     text-align: center;
     position: relative;
-    top: 100px;
+    top: 370px;
     
 }
 
@@ -52,10 +55,10 @@
 }
 
 .divmuneco{
-    position: relative;
-    text-align: right;
-    right: 60px;
-    top: -200px;
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    size: auto;
 
 }
 

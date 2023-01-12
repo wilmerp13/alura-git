@@ -2,60 +2,57 @@ let texto = document.querySelector('textarea');
 texto.focus();
 
 document.querySelector('.encriptar').addEventListener('click', function(){
-    console.log((texto).value);
-    // La letra "e" es convertida para "enter"
-    // La letra "i" es convertida para "imes"
-    // La letra "a" es convertida para "ai"
-    // La letra "o" es convertida para "ober"
-    // La letra "u" es convertida para "ufat"
-  if (texto.value === 'e'){
-    texto.value = 'enter';
-}
-  else if (texto.value === 'i'){
-           texto.value = 'imes';
-
-}
-  else if (texto.value === 'a'){
-           texto.value = 'ai';
-}
-
-else if (texto.value === 'o'){
-         texto.value = 'ober';
-}
-
-else if (texto.value === 'u'){
-         texto.value = 'ufat';
-}
-
-
-console.log(texto.value);
-   
-   
-
+    // Encrypt the text
+    let text = texto.value;
+    let encryptedText = "";
+    console.log(text.length);
+    for (let i = 0; i < text.length; i++) {
+        switch(text[i]) {
+            case 'a':
+                encryptedText += 'ai';
+                break;
+            case 'e':
+                encryptedText += 'enter';
+                break;
+            case 'i':
+                encryptedText += 'imes';
+                break;
+            case 'o':
+                encryptedText += 'ober';
+                break;
+            case 'u':
+                encryptedText += 'ufat';
+                break;
+            default:
+                encryptedText += text[i];
+        }
+    }
+    texto.value = encryptedText;
 });
 
-
-
 document.querySelector('.desencriptar').addEventListener('click', function(){
-
-    if (texto.value === 'enter'){
-        texto.value = 'e';
+    // Decrypt the text
+    let text = texto.value;
+    let decryptedText = "";
+    for (let i = 0; i < text.length; i++) {
+        if (text.substring(i, i+2) === "ai") {
+            decryptedText += "a";
+            i++;
+        } else if (text.substring(i, i+5) === "enter") {
+            decryptedText += "e";
+            i += 4;
+        } else if (text.substring(i, i+4) === "imes") {
+            decryptedText += "i";
+            i += 3;
+        } else if (text.substring(i, i+4) === "ober") {
+            decryptedText += "o";
+            i += 3;
+        } else if (text.substring(i, i+4) === "ufat") {
+            decryptedText += "u";
+            i += 3;
+        } else {
+            decryptedText += text[i];
+        }
     }
-      else if (texto.value == 'imes'){
-               texto.value = 'i';
-    
-    }
-      else if (texto.value == 'ai'){
-               texto.value = 'a';
-    }
-    
-    else if (texto.value == 'ober'){
-             texto.value = 'o';
-    }
-    
-    else if (texto.value == 'ufat'){
-             texto.value = 'u';
-    }
-    console.log(texto.value);
-
+    texto.value = decryptedText;
 });
