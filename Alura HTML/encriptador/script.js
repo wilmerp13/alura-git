@@ -1,11 +1,21 @@
-let texto = document.querySelector('textarea');
+const texto = document.querySelector('textarea');
 texto.focus();
+const closeModalbtn = document.querySelector('.close-modal');
+const divMuneco = document.querySelector('.divmuneco');
+const modal = document.querySelector('.modal');
+
+if (texto.value == ''){
+             divMuneco.classList.remove('hidden');
+
+} 
+
+
+
 
 document.querySelector('.encriptar').addEventListener('click', function(){
     // Encrypt the text
     let text = texto.value;
     let encryptedText = "";
-    console.log(text.length);
     for (let i = 0; i < text.length; i++) {
         switch(text[i]) {
             case 'a':
@@ -26,9 +36,19 @@ document.querySelector('.encriptar').addEventListener('click', function(){
             default:
                 encryptedText += text[i];
         }
+        texto.value = encryptedText;
+        
+            divMuneco.classList.add('hidden');
+            document.querySelector('.modalText').textContent = encryptedText;
+            document.querySelector('.modal-h1').textContent = 'Mensaje Encriptado';
+            modal.classList.remove('hidden');
     }
-    texto.value = encryptedText;
+
+    
+
 });
+
+
 
 document.querySelector('.desencriptar').addEventListener('click', function(){
     // Decrypt the text
@@ -55,4 +75,23 @@ document.querySelector('.desencriptar').addEventListener('click', function(){
         }
     }
     texto.value = decryptedText;
+
+    divMuneco.classList.add('hidden');
+    document.querySelector('.modalText').textContent = decryptedText;
+    document.querySelector('.modal-h1').textContent = 'Mensaje Desencriptado';
+    modal.classList.remove('hidden');
+
 });
+
+const closeModal = closeModalbtn.addEventListener('click', function(){
+        modal.classList.add('hidden');
+        texto.value = '';
+        texto.focus();
+        
+        if (texto.value == ''){
+            divMuneco.classList.remove('hidden');
+    } 
+    
+    });
+
+    
