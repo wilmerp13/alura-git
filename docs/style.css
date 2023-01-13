@@ -1,3 +1,6 @@
+body {
+  background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+}
 .logo {
     text-align: start;
     position: relative;
@@ -162,4 +165,57 @@
     font-size: 15px;
     bottom: 5px;
     font-weight: bold;
+}
+
+@media (max-width: 480px) {
+
+  .logo{
+    width: auto;
+    left: -60px;
+    top: auto;
+  }
+
+  .divmuneco{
+    position: absolute;
+    top: 130px;
+  }
+  .divmuneco::target-text{
+    position: absolute;
+    text-align: center;
+    
+  }
+  .muneco{
+    display: block;
+    width: 60%;
+    position: absolute;
+    padding: 20px;
+    margin: 50px;
+   
+  }
+
+  .modal{
+    width: auto;
+    height: auto;
+  }
+
+.modal-copy{
+  width: auto;
+  height: auto;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 7px;
+}
+
+  .encriptar{
+margin-right: 0px;
+    
+  }
+
+  .caja-texto{
+    display: block;   
+  }
+
+
+
 }

@@ -4,6 +4,7 @@ const closeModalbtn = document.querySelector('.close-modal');
 const divMuneco = document.querySelector('.divmuneco');
 const modal = document.querySelector('.modal');
 const modalText = document.querySelector('.modalText');
+const overlay = document.querySelector('.overlay');
 
 if (texto.value == ''){
              divMuneco.classList.remove('hidden');
@@ -40,6 +41,7 @@ document.querySelector('.encriptar').addEventListener('click', function(){
             modalText.textContent = encryptedText;
             document.querySelector('.modal-h1').textContent = 'Mensaje Encriptado';
             modal.classList.remove('hidden');
+            overlay.classList.remove('hidden')
     }
 
 });
@@ -74,6 +76,7 @@ document.querySelector('.desencriptar').addEventListener('click', function(){
     modalText.textContent = decryptedText;
     document.querySelector('.modal-h1').textContent = 'Mensaje Desencriptado';
     modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
 
 });
 
@@ -86,6 +89,7 @@ const closeModal = closeModalbtn.addEventListener('click', function(){
         modal.classList.add('hidden');
         texto.value = '';
         texto.focus();
+        overlay.classList.add('hidden');
 
         if (texto.value == ''){
             divMuneco.classList.remove('hidden');
