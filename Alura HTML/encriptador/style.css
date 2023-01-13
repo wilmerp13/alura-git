@@ -168,13 +168,11 @@ body {
 }
 
 @media (max-width: 480px) {
-
   .logo{
     width: auto;
     left: -60px;
     top: auto;
   }
-
   .divmuneco{
     position: absolute;
     top: 130px;
@@ -182,7 +180,6 @@ body {
   .divmuneco::target-text{
     position: absolute;
     text-align: center;
-    
   }
   .muneco{
     display: block;
@@ -190,7 +187,6 @@ body {
     position: absolute;
     padding: 20px;
     margin: 50px;
-   
   }
 
   .modal{
@@ -206,16 +202,19 @@ body {
   display: inline-block;
   left: 7px;
 }
-
   .encriptar{
 margin-right: 0px;
     
   }
-
+  
   .caja-texto{
     display: block;   
   }
 
+  .copyright{
+    display: block;
+    position: absolute;
+    width: auto;
 
-
+  }
 }
