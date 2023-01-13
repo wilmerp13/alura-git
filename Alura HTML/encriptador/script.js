@@ -3,18 +3,16 @@ texto.focus();
 const closeModalbtn = document.querySelector('.close-modal');
 const divMuneco = document.querySelector('.divmuneco');
 const modal = document.querySelector('.modal');
+const modalText = document.querySelector('.modalText');
 
 if (texto.value == ''){
              divMuneco.classList.remove('hidden');
 
 } 
 
-
-
-
 document.querySelector('.encriptar').addEventListener('click', function(){
     // Encrypt the text
-    let text = texto.value;
+    let text = texto.value.toLowerCase();
     let encryptedText = "";
     for (let i = 0; i < text.length; i++) {
         switch(text[i]) {
@@ -39,20 +37,16 @@ document.querySelector('.encriptar').addEventListener('click', function(){
         texto.value = encryptedText;
         
             divMuneco.classList.add('hidden');
-            document.querySelector('.modalText').textContent = encryptedText;
+            modalText.textContent = encryptedText;
             document.querySelector('.modal-h1').textContent = 'Mensaje Encriptado';
             modal.classList.remove('hidden');
     }
 
-    
-
 });
-
-
 
 document.querySelector('.desencriptar').addEventListener('click', function(){
     // Decrypt the text
-    let text = texto.value;
+    let text = texto.value.toLowerCase();
     let decryptedText = "";
     for (let i = 0; i < text.length; i++) {
         if (text.substring(i, i+2) === "ai") {
@@ -77,9 +71,14 @@ document.querySelector('.desencriptar').addEventListener('click', function(){
     texto.value = decryptedText;
 
     divMuneco.classList.add('hidden');
-    document.querySelector('.modalText').textContent = decryptedText;
+    modalText.textContent = decryptedText;
     document.querySelector('.modal-h1').textContent = 'Mensaje Desencriptado';
     modal.classList.remove('hidden');
+
+});
+
+document.querySelector('.modal-copy').addEventListener('click',function(){
+    navigator.clipboard.writeText(modalText.innerHTML);
 
 });
 
@@ -87,7 +86,7 @@ const closeModal = closeModalbtn.addEventListener('click', function(){
         modal.classList.add('hidden');
         texto.value = '';
         texto.focus();
-        
+
         if (texto.value == ''){
             divMuneco.classList.remove('hidden');
     } 
