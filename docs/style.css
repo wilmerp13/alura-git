@@ -180,7 +180,9 @@ body {
   .divmuneco::target-text{
     position: absolute;
     text-align: center;
+    width: auto;
   }
+    
   .muneco{
     display: block;
     width: 60%;
@@ -208,13 +210,24 @@ margin-right: 0px;
   }
   
   .caja-texto{
-    display: block;   
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    left: auto;
+    
+
+  }
+  .input-padron{
+   
+    display: inline-block;
   }
 
   .copyright{
-    display: block;
+    display: inline-block;
     position: absolute;
-    width: auto;
+    bottom: -130px;
+
+  
 
   }
 }
