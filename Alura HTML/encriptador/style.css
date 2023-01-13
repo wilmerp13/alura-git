@@ -44,12 +44,12 @@
   }
 
   .modal-copy:hover{
-    font-size: 18px;
+    padding:12px;
     font-weight: bold;
     
   }
   .modal-copy:active{
-    color: red;
+    color: #51e2f5;
     
   }
   
