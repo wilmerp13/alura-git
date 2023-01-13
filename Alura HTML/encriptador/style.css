@@ -159,6 +159,7 @@
 
 .copyright{
     position: absolute;
-    font-size: 12px;
+    font-size: 15px;
     bottom: 5px;
+    font-weight: bold;
 }
